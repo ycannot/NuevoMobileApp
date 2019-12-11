@@ -3,12 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_vertical"
-    android:background="#c0b3c2"
-    android:layout_marginTop="80dp">
+    android:background="#c0b3c2">
     <ImageView
         android:id="@+id/photo"
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +15,7 @@
 
         <TextView
             android:id="@+id/photoTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Deneme Deneme"
             android:textSize="15dp"/>

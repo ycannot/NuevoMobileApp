@@ -1,13 +1,10 @@
 package com.example.nuevotest;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ListView;
-
 import java.util.ArrayList;
-import java.util.List;
+
 
 
 public class FirstView extends AppCompatActivity {
