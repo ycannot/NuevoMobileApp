@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SecondView"></activity>
-        <activity android:name=".FirstView">
+        <activity android:name=".Views.SecondView"></activity>
+        <activity android:name=".Views.FirstView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

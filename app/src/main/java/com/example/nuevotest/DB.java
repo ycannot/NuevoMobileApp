@@ -1,6 +1,17 @@
+/*
+    *DB object holds both PhotoModel ArrayList and CommentModel.
+
+    *Author Yiğit Can Yılmaz.
+    *Writed for Nuevo.
+---------------------------------------------------------------------
+
+ */
+
+
 package com.example.nuevotest;
 
-import android.util.Log;
+import com.example.nuevotest.Models.CommentModel;
+import com.example.nuevotest.Models.PhotoModel;
 
 import java.util.ArrayList;
 

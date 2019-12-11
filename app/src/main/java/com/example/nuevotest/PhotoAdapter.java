@@ -1,3 +1,13 @@
+/*
+    *This class is for adapt ArrayList data to ListView.
+    *Uses cover.xml layout for zeroth index.
+    *Uses line.xml layout for all indexes except zeroth index.
+
+    *Author Yiğit Can Yılmaz.
+    *Writed for Nuevo.
+    ---------------------------------------------------------------------
+
+    */
 package com.example.nuevotest;
 
 
@@ -11,6 +21,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.example.nuevotest.Models.PhotoModel;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -51,7 +64,7 @@ public class PhotoAdapter extends ArrayAdapter<PhotoModel> {
             TextView title = (TextView) convertView.findViewById(R.id.coverTitle) ;
             ImageView photo = (ImageView) convertView.findViewById(R.id.coverPhoto) ;
 
-            photo.setImageBitmap(photos.get(position).getCoverBitmap());
+            Picasso.get().load(photos.get(position).getUrl()).into(photo);
             title.setText(photos.get(position).getTitle());
         }
         else{
@@ -59,7 +72,7 @@ public class PhotoAdapter extends ArrayAdapter<PhotoModel> {
             TextView title = (TextView) convertView.findViewById(R.id.photoTitle) ;
             ImageView photo = (ImageView) convertView.findViewById(R.id.photo) ;
 
-            photo.setImageBitmap(photos.get(position).getThumbnailBitmap());
+            Picasso.get().load(photos.get(position).getThumbnailUrl()).into(photo);
             title.setText(photos.get(position).getTitle());
         }
 

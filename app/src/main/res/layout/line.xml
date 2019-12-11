@@ -3,12 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_vertical"
-    android:background="#c0b3c2">
+    android:background="@drawable/myrectangle">
     <ImageView
         android:id="@+id/photo"
-        android:layout_width="150dp"
-        android:layout_height="150dp" />
-    <LinearLayout
+        android:layout_width="125dp"
+        android:layout_height="125dp" />
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -19,5 +19,5 @@
             android:layout_height="wrap_content"
             android:text="Deneme Deneme"
             android:textSize="15dp"/>
-    </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

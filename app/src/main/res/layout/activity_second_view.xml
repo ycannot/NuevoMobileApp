@@ -4,6 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondView">
+    tools:context=".Views.SecondView">
+
+    <ImageView
+        android:id="@+id/secondImageView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/secondViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        app:layout_constraintTop_toBottomOf="@+id/secondImageView"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:typeface="serif"
+        />
+
+    <TextView
+        android:id="@+id/secondViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        app:layout_constraintTop_toBottomOf="@+id/secondViewTitle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+
+        />
+    <TextView
+        android:id="@+id/secondViewEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="email"
+        app:layout_constraintTop_toBottomOf="@+id/secondViewName"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textStyle="italic"
+        android:textColor="@android:color/darker_gray"
+
+        />
+    <TextView
+        android:id="@+id/secondViewBody"
+        android:layout_width="match_parent"
+        android:layout_height="196dp"
+        android:text="Body"
+        app:layout_constraintTop_toBottomOf="@+id/secondViewEmail"
+        android:layout_margin="20dp" />
+
+    <Button
+        android:id="@+id/backButton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK"
+        android:onClick="goBack"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
