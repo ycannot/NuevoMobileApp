@@ -37,6 +37,7 @@ public class FirstController {
 
         db = new DB(photoService.getPhotomodels(),commentService.getCommentmodels());
 
+
     }
 
     public PhotoModel getPhoto(int id){

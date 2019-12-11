@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
-import java.util.concurrent.ExecutionException;
 
 public class PhotoAdapter extends ArrayAdapter<PhotoModel> {
     private LayoutInflater inflater;
@@ -51,29 +50,16 @@ public class PhotoAdapter extends ArrayAdapter<PhotoModel> {
             convertView =inflater.inflate(R.layout.cover,null);
             TextView title = (TextView) convertView.findViewById(R.id.coverTitle) ;
             ImageView photo = (ImageView) convertView.findViewById(R.id.coverPhoto) ;
-            PhotoDownloader photoDownloader = new PhotoDownloader(photos.get(position).getUrl());
-            try {
-                photoDownloader.execute().get();
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            photo.setImageBitmap(photoDownloader.getImg());
+
+            photo.setImageBitmap(photos.get(position).getCoverBitmap());
+            title.setText(photos.get(position).getTitle());
         }
         else{
             convertView =inflater.inflate(R.layout.line,null);
             TextView title = (TextView) convertView.findViewById(R.id.photoTitle) ;
             ImageView photo = (ImageView) convertView.findViewById(R.id.photo) ;
-            PhotoDownloader photoDownloader = new PhotoDownloader(photos.get(position).getThumbnailUrl());
-            try {
-                photoDownloader.execute().get();
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            photo.setImageBitmap(photoDownloader.getImg());
+
+            photo.setImageBitmap(photos.get(position).getThumbnailBitmap());
             title.setText(photos.get(position).getTitle());
         }
 

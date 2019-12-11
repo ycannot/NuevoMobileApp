@@ -1,6 +1,8 @@
 package com.example.nuevotest;
 
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -27,6 +29,8 @@ public class PhotoService extends AsyncTask<Void, Void, Void> {
     private JSONArray jsonArray;
     public ArrayList<PhotoModel> photomodels = new ArrayList<>();
     private JSONObject jsonObject;
+    private Bitmap thumbPhoto;
+    private Bitmap coverPhoto;
     private Gson gson = new Gson();
 
     @Override
@@ -48,6 +52,8 @@ public class PhotoService extends AsyncTask<Void, Void, Void> {
             for (int i=0; i<jsonArray.length(); i++){
                 jsonObject = (JSONObject) jsonArray.get(i);
                 photomodels.add(gson.fromJson(jsonObject.toString(),PhotoModel.class));
+                photomodels.get(i).setThumbnailBitmap(BitmapFactory.decodeStream((new URL(photomodels.get(i).getThumbnailUrl()).openConnection().getInputStream())));
+                photomodels.get(i).setCoverBitmap(BitmapFactory.decodeStream((new URL(photomodels.get(i).getUrl()).openConnection().getInputStream())));
                 photomodels.get(i).toString();
             }
 

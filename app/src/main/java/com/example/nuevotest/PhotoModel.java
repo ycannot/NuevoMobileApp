@@ -18,6 +18,7 @@
 
 package com.example.nuevotest;
 
+import android.graphics.Bitmap;
 import android.util.Log;
 
 public class PhotoModel {
@@ -26,6 +27,8 @@ public class PhotoModel {
     private String title;
     private String url;
     private String thumbnailUrl;
+    private Bitmap thumbnailBitmap;
+    private Bitmap CoverBitmap;
 
     public PhotoModel(String albumId, String id, String title, String url, String thumbnailUrl) {
         this.albumId = albumId;
@@ -41,6 +44,22 @@ public class PhotoModel {
         this.title = null;
         this.url = null;
         this.thumbnailUrl = null;
+    }
+
+    public Bitmap getThumbnailBitmap() {
+        return thumbnailBitmap;
+    }
+
+    public void setThumbnailBitmap(Bitmap thumbnailBitmap) {
+        this.thumbnailBitmap = thumbnailBitmap;
+    }
+
+    public Bitmap getCoverBitmap() {
+        return CoverBitmap;
+    }
+
+    public void setCoverBitmap(Bitmap coverBitmap) {
+        CoverBitmap = coverBitmap;
     }
 
     public String getAlbumId() {
