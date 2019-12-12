@@ -2,7 +2,7 @@
 Nuevo Mobile App HW. 
 Signed APK file directory is app/release/app-release.apk.
 
-Written for nuevo.
+Written for Nuevo.
 Author: Yiğit Can YILMAZ.
 
 ## Screenshots
