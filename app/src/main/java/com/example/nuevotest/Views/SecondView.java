@@ -3,7 +3,7 @@
     *Also takes String data of previous item and next item by using intent
 
     *Author Yiğit Can Yılmaz.
-    *Writed for Nuevo.
+    *Written for Nuevo.
 -----------------------------------------------------------------------
  */
 

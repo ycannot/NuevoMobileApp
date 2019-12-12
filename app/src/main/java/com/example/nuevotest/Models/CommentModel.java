@@ -12,7 +12,7 @@
   },
 
   *Author Yiğit Can Yılmaz.
-  *Writed for Nuevo.
+  *Written for Nuevo.
 ---------------------------------------------------------------------
  */
 

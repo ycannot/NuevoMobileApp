@@ -2,7 +2,7 @@
     *DB object holds both PhotoModel ArrayList and CommentModel.
 
     *Author Yiğit Can Yılmaz.
-    *Writed for Nuevo.
+    *Written for Nuevo.
 ---------------------------------------------------------------------
 
  */

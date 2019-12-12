@@ -4,7 +4,7 @@
     *Uses line.xml layout for all indexes except zeroth index.
 
     *Author Yiğit Can Yılmaz.
-    *Writed for Nuevo.
+    *Written for Nuevo.
     ---------------------------------------------------------------------
 
     */

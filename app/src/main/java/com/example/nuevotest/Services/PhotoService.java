@@ -3,7 +3,7 @@
     * Converts json array to PhotoModel ArrayList.
 
     *Author Yiğit Can Yılmaz.
-    *Writed for Nuevo.
+    *Written for Nuevo.
 ---------------------------------------------------------------------
 
  */
