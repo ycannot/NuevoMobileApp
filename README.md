@@ -1,5 +1,9 @@
 # NuevoMobileApp
-Nuevo Mobile App HW. Author: Yiğit Can YILMAZ.
+Nuevo Mobile App HW. 
+Signed APK file directory is app/release/app-release.apk.
+
+Written for nuevo.
+Author: Yiğit Can YILMAZ.
 
 ## Screenshots
 
