@@ -27,6 +27,8 @@ import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.crashes.Crashes;
 
+import java.util.ArrayList;
+
 public class SecondView extends AppCompatActivity {
     private Intent intent;
     private int position;
@@ -80,7 +82,10 @@ public class SecondView extends AppCompatActivity {
                    @Override
                    public void onClick(View v) {
                        try{
-                           throw new Exception("Test Exception Message");
+
+                           ArrayList<Integer> asd = new ArrayList<Integer>();
+                           asd.get(5);
+                           //throw new Exception("Test Exception Message");
                        } catch (Exception e){
                            Crashes.trackError(e);
                        }
@@ -121,7 +126,7 @@ public class SecondView extends AppCompatActivity {
                     @Override
                     //checks whether next item is displaying now or not
                     public void onClick(View v) {
-                        throw new Exception("Test Exception Message");
+
                         if (canPrev==false && title.getText()!=photoTitle){
                             title.setText(photoTitle);
                             name.setText(c.getComment().getName());
@@ -148,7 +153,8 @@ public class SecondView extends AppCompatActivity {
                             nextButton.setClickable(false);
                             prevButton.setClickable(true);
                         }
-
+                        ArrayList<Integer> asd = new ArrayList<Integer>();
+                        asd.get(5);
                     }
                 }
         );
@@ -161,9 +167,8 @@ public class SecondView extends AppCompatActivity {
         finish();
     }
 
-    public void goPrev(View view) {
-        if (this.prev!=null){
 
-        }
+    public void goPrev() {
+
     }
 }
