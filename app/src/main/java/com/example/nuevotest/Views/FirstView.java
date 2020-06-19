@@ -15,6 +15,10 @@ import com.example.nuevotest.R;
 
 import java.util.ArrayList;
 
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+
 
 
 public class FirstView extends AppCompatActivity {
@@ -27,7 +31,7 @@ public class FirstView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_view);
-
+        AppCenter.start(getApplication(), "430c0f8a-08a7-40b9-923d-77b3c9f231af", Analytics.class, Crashes.class);
         PhotoAdapter photoAdapter= new PhotoAdapter(FirstView.this,photos);
         listView = (ListView) findViewById(R.id.listView1);
         listView.setAdapter(photoAdapter);
