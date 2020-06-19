@@ -15,9 +15,9 @@ android {
     signingConfigs {
         releaseSigningConfig {
             storeFile rootProject.file("app/NuevoDeneme.keystore")
-            storePassword System.getProperty("APPCENTER_KEYSTORE_PASSWORD")
-            keyAlias System.getProperty("APPCENTER_KEY_ALIAS")
-            keyPassword System.getProperty("APPCENTER_KEYSTORE_PASSWORD")
+            storePassword System.getenv("APPCENTER_KEYSTORE_PASSWORD")
+            keyAlias System.getenv("APPCENTER_KEY_ALIAS")
+            keyPassword System.getenv("APPCENTER_KEYSTORE_PASSWORD")
         }
     }
     buildTypes {
@@ -29,6 +29,7 @@ android {
         }
         all {
             buildConfigField("String", "APPCENTER_APP_SECRET", "\"APPCENTER_APP_ID\"")
+
         }
         testBuildType "release"
 
