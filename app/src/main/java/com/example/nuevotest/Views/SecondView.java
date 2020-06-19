@@ -83,8 +83,8 @@ public class SecondView extends AppCompatActivity {
                    public void onClick(View v) {
                        try{
 
-                           ArrayList<Integer> asd = new ArrayList<Integer>();
-                           asd.get(5);
+                           //ArrayList<Integer> asd = new ArrayList<Integer>();
+                           //asd.get(5);
                            //throw new Exception("Test Exception Message");
                        } catch (Exception e){
                            Crashes.trackError(e);
@@ -153,8 +153,8 @@ public class SecondView extends AppCompatActivity {
                             nextButton.setClickable(false);
                             prevButton.setClickable(true);
                         }
-                        ArrayList<Integer> asd = new ArrayList<Integer>();
-                        asd.get(5);
+                        //ArrayList<Integer> asd = new ArrayList<Integer>();
+                        //asd.get(5);
                     }
                 }
         );

@@ -16,6 +16,7 @@ import com.example.nuevotest.R;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
+import org.junit.After;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,6 +32,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.anything;
 import static org.hamcrest.Matchers.is;
+import com.microsoft.appcenter.espresso.Factory;
+import com.microsoft.appcenter.espresso.ReportHelper;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
@@ -38,6 +41,14 @@ public class FirstViewUITest {
 
     @Rule
     public ActivityTestRule<FirstView> mActivityTestRule = new ActivityTestRule<>(FirstView.class);
+
+    @Rule
+    public ReportHelper reportHelper = Factory.getReportHelper();
+
+    @After
+    public void tearDown() throws Exception {
+        reportHelper.label("Stopping App");
+    }
 
     @Test
     public void firstViewUITest() {
