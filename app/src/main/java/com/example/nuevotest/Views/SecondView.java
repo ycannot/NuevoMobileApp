@@ -80,7 +80,7 @@ public class SecondView extends AppCompatActivity {
                    @Override
                    public void onClick(View v) {
                        try{
-                           Crashes.generateTestCrash();
+                           throw new Exception("Test Exception Message");
                        } catch (Exception e){
                            Crashes.trackError(e);
                        }
@@ -121,7 +121,7 @@ public class SecondView extends AppCompatActivity {
                     @Override
                     //checks whether next item is displaying now or not
                     public void onClick(View v) {
-                        Crashes.generateTestCrash();
+                        throw new Exception("Test Exception Message");
                         if (canPrev==false && title.getText()!=photoTitle){
                             title.setText(photoTitle);
                             name.setText(c.getComment().getName());
