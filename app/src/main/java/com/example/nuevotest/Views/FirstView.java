@@ -3,11 +3,13 @@ package com.example.nuevotest.Views;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.nuevotest.BuildConfig;
 import com.example.nuevotest.Controllers.FirstController;
 import com.example.nuevotest.PhotoAdapter;
 import com.example.nuevotest.Models.PhotoModel;
@@ -31,7 +33,8 @@ public class FirstView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_view);
-        AppCenter.start(getApplication(), "430c0f8a-08a7-40b9-923d-77b3c9f231af", Analytics.class, Crashes.class);
+
+        AppCenter.start(getApplication(),BuildConfig.APPCENTER_APP_SECRET, Analytics.class, Crashes.class);
         PhotoAdapter photoAdapter= new PhotoAdapter(FirstView.this,photos);
         listView = (ListView) findViewById(R.id.listView1);
         listView.setAdapter(photoAdapter);
