@@ -44,6 +44,7 @@ public class FirstView extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(FirstView.this, SecondView.class);
                 ArrayList<String> prevnext=getPrevNext(position);
+                Analytics.trackEvent("Photo "+photos.get(position).getUrl()+" clicked.");
                 intent.putExtra("photoUrl", photos.get(position).getUrl());
                 intent.putExtra("position",position+1); //enumerator id of data starts from 1 thats why 1 added to position
                 intent.putExtra("prev",prevnext.get(0));

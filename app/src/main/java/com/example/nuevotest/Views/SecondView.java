@@ -23,6 +23,9 @@ import com.example.nuevotest.Controllers.SecondController;
 import com.example.nuevotest.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.squareup.picasso.Picasso;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 
 public class SecondView extends AppCompatActivity {
     private Intent intent;
@@ -40,6 +43,7 @@ public class SecondView extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_second_view);
         intent = getIntent();
         photoUrl = intent.getStringExtra("photoUrl");
@@ -75,6 +79,11 @@ public class SecondView extends AppCompatActivity {
                 new View.OnClickListener() {
                    @Override
                    public void onClick(View v) {
+                       try{
+                           Crashes.generateTestCrash();
+                       } catch (Exception e){
+                           Crashes.trackError(e);
+                       }
                        //checks whether previous item is displaying now or not
                        if (canNext==false && title.getText()!=photoTitle){
                            title.setText(photoTitle);
@@ -112,6 +121,7 @@ public class SecondView extends AppCompatActivity {
                     @Override
                     //checks whether next item is displaying now or not
                     public void onClick(View v) {
+                        Crashes.generateTestCrash();
                         if (canPrev==false && title.getText()!=photoTitle){
                             title.setText(photoTitle);
                             name.setText(c.getComment().getName());
