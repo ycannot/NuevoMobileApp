@@ -21,6 +21,7 @@ android {
         all {
             buildConfigField("String", "APPCENTER_APP_SECRET", "\"APPCENTER_APP_ID\"")
         }
+        testBuildType "release"
 
     }
 
